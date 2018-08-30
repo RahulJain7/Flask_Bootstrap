@@ -1,0 +1,68 @@
+{% extends "bootstrap/base.html" %}
+<head>
+<link href="/static/open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">
+</head>
+{% block content %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+  <img src="/static/R.png" width="30" height="30"
+  class="d-inline-block align-top" alt="">
+  Rahul 
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  	<form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="notifyDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <img src="/static/open-iconic/svg/bell.svg" class="d-inline-block align-top" width="25" height="25" alt="">
+        </a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="settingsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <img src="/static/open-iconic/svg/cog.svg" class="d-inline-block align-top" width="25" height="25" alt="">
+        </a>
+          <div class="dropdown-menu" aria-labelledby="settingsrDropdown">
+          <a class="dropdown-item" href="#">Account Settings</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="infoDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <img src="/static/open-iconic/svg/info.svg" class="d-inline-block align-top" width="25" height="25" alt="">
+        </a>
+      </li>
+       <li>
+		<a class="navbar-brand" href="#">
+		User Name 
+	    </a>
+	   </li>
+    </ul>
+
+  </div>
+</nav>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-2">
+		<div class="alert alert-secondary" role="alert" >
+		<button class="btn btn-outline-primary my-3 " type="submit">Search</button>
+		</div>
+
+		</div>
+		<div class="col-10">
+		</div>
+	</div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+{% endblock %}
